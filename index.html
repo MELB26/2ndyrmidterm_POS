@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="pics/favicon.png" type="">
+<title>MK Cafe & Restaurant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="menu-container">
+            <div class="menu-title">MENU</div>
+            <div class="menu-items">
+                <div class="item-container">
+                    <div>
+                        <img src="pics/f1.png" alt="Shrimp-Pizza" width="100%">
+                        <h4><b>Shrimp Pizza</b><br><b>399 PHP</b></h4>
+                    </div>
+                    <input type="number" id="Shrimp-Pizza-quantity" placeholder="Enter how many">
+                    <br>
+                    <button onclick="addToOrder('Shrimp-Pizza', 399, 'Shrimp-Pizza-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="pics/f2.png" alt="Qrtr-Burger" width="100%">
+                        <h4><b>Qrtr. Burger</b><br><b>199 PHP</b></h4>
+                    </div>
+                    <input type="number" id="Qrtr-Burger-quantity">
+                    <br>
+                    <button onclick="addToOrder('Qrtr-Burger', 199, 'Qrtr-Burger-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="pics/f3.png" alt="Vege-Pizza" width="100%">
+                        <h4><b>Vege Pizza</b><br><b>299 PHP</b></h4>
+                    </div>
+                    <input type="number" id="Vege-Pizza-quantity">
+                    <br>
+                    <button onclick="addToOrder('Vege-Pizza', 299, 'Vege-Pizza-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="pics/f5.png" alt="Fries" width="100%">
+                        <h4><b>Fries</b><br><b>89 PHP</b></h4>
+                    </div>
+                    <input type="number" id="Fries-quantity">
+                    <br>
+                    <button onclick="addToOrder('Fries', 89, 'Fries-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="pics/f7.png" alt="Chckn-Burger" width="100%">
+                        <h4><b>Chckn Burger</b><br><b>179 PHP</b></h4>
+                    </div>
+                    <input type="number" id="Chckn-Burger-quantity">
+                    <br>
+                    <button onclick="addToOrder('Chckn-Burger', 179, 'Chckn-Burger-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="pics/f8.png" alt="Egg-Burger" width="100%">
+                        <h4><b>Egg Burger</b><br><b>159 PHP</b></h4>
+                    </div>
+                    <input type="number" id="Egg-Burger-quantity">
+                    <br>
+                    <button onclick="addToOrder('Egg-Burger', 159, 'Egg-Burger-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="pics/mtcha.png" alt="Matcha-Latte" width="100%">
+                        <h4><b>Matcha</b><br><b>159 PHP</b></h4>
+                    </div>
+                    <input type="number" id="Matcha-quantity">
+                    <br>
+                    <button onclick="addToOrder('Matcha-Latte', 159, 'Matcha-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="pics/wcm.png" alt="White-Mocha" width="100%">
+                        <h4><b>White Mocha</b><br><b>169 PHP</b></h4>
+                    </div>
+                    <input type="number" id="White-Mocha-quantity">
+                    <br>
+                    <button onclick="addToOrder('White-Mocha', 169, 'White-Mocha-quantity')">Add to order</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="ordered-items-container">
+            <div class="ordered-items-title">Ordered Items</div>
+            <div class="ordered-item-container" id="order-details">
+                <!-- Cards will be added here dynamically -->
+            </div>
+            <div class="total-container">
+                <div>
+                    <b>Total:</b> <span id="total"></span><br>
+                    <input type="number" id="customer-cash" placeholder="Enter cash amount here"><br>
+                    <button onclick="calculateChange()">Pay!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>
